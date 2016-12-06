@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'imposter',
+    modulePrefix: 'recipes',
     environment: environment,
     rootURL: null,
     locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'auto',
