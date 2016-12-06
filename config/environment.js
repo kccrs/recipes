@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'imposter',
     environment: environment,
     rootURL: null,
-    locationType: 'hash',
+    locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -29,7 +29,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    
+
     ENV.locationType = 'none';
 
     // keep test console output quieter
