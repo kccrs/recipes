@@ -1,14 +1,14 @@
 {
-  "name": "imposter",
+  "name": "recipes",
   "version": "0.0.0",
-  "description": "Small description for imposter goes here",
+  "description": "A desktop app to track and search for recipes sugin Ember and Electron.",
   "license": "MIT",
-  "author": "",
+  "author": "Casey Cross and MaryJane Valade",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/kccrs/recipes",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -92,5 +92,8 @@
       "ProductName": null,
       "InternalName": null
     }
+  },
+  "dependencies": {
+    "ember-cli-sass": "^5.6.0"
   }
 }
