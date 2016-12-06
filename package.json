@@ -1,9 +1,9 @@
 {
-  "name": "imposter",
+  "name": "recipies",
   "version": "0.0.0",
-  "description": "Small description for imposter goes here",
+  "description": "A desktop app to track and search for recipes using Ember and Electron.",
   "license": "MIT",
-  "author": "",
+  "author": "Casey Cross and MaryJane Valade",
   "directories": {
     "doc": "doc",
     "test": "tests"
