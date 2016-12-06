@@ -1,7 +1,7 @@
 {
   "name": "recipes",
   "version": "0.0.0",
-  "description": "A desktop app to track and search for recipes sugin Ember and Electron.",
+  "description": "A desktop app to track and search for recipes using Ember and Electron.",
   "license": "MIT",
   "author": "Casey Cross and MaryJane Valade",
   "directories": {
