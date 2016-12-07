@@ -1,11 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-  store: Ember.inject.service(),
-
-  tagName: 'section',
-  classNames: ['add-recipe'],
-
+export default Ember.Controller.extend({
   name: '',
   photo: '',
   servings: '',
