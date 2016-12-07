@@ -1,11 +1,19 @@
 <section class="application">
   {{outlet}}
+
   <footer class="footer">
     <form class="" action="index.html" method="post">
       <input type="submit" name="" value="Search">
       <input type="text" name="" placeholder="Search for recipe">
     </form>
-    <button class="add-button">Add Recipe</button>
-    <button class="see-all-button">See All Recipes</button>
+
+    {{#link-to 'recipes.add-recipe' class="add-button" tagName="button"}}
+      Add Recipe
+    {{/link-to}}
+
+    {{#link-to 'recipes.all-recipes' class="see-all-button" tagName="button"}}
+      See All Recipes
+    {{/link-to}}
+
   </footer>
 </section>
