@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('recipe-detail');
+  this.route('all-recipes');
 });
 
 export default Router;
