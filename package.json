@@ -12,14 +12,17 @@
   "scripts": {
     "build": "ember build",
     "start": "ember electron",
-    "test": "ember test --server"
+    "test": "ember test --server",
+    "postinstall": "electron-rebuild"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "devtron": "^1.4.0",
     "electron": "^1.4.10",
     "electron-packager": "^8.3.0",
+    "electron-prebuilt-compile": "^1.4.11",
     "electron-rebuild": "^1.4.0",
+    "ember": "^1.0.0-pre.2",
     "ember-ajax": "^2.4.1",
     "ember-cli": "2.10.0",
     "ember-cli-app-version": "^2.0.0",
@@ -94,6 +97,8 @@
     }
   },
   "dependencies": {
-    "ember-cli-sass": "^5.6.0"
+    "ember-cli-sass": "^5.6.0",
+    "knex": "^0.12.6",
+    "sqlite3": "^3.1.8"
   }
 }

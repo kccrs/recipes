@@ -1,7 +1,7 @@
 <section class="application">
-  {{outlet}}
-
-  {{add-recipe}}
+  <h1>Super Sweet Recipe App</h1>
+    {{outlet}}
+  <!-- {{add-recipe}} -->
 
   <footer class="footer">
     <form class="" action="index.html" method="post">
@@ -9,9 +9,9 @@
       <input type="submit" name="" value="Search">
     </form>
 
-    {{!-- {{#link-to 'recipes.add-recipe' class="add-button" tagName="button"}}
+    <!-- {{#link-to 'recipes.add-recipe' class="add-button" tagName="button"}}
       Add Recipe
-    {{/link-to}} --}}
+    {{/link-to}} -->
 
     {{#link-to 'all-recipes' class="see-all-button" tagName="button"}}
       See All Recipes
