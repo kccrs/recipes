@@ -12,14 +12,20 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{add-recipe}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('.name-label').text().trim(), 'Recipe Name');
+  assert.equal(this.$('.photo-label').text().trim(), 'Upload Photo');
+  assert.equal(this.$('.servings-label').text().trim(), 'Number of Servings');
+  assert.equal(this.$('.time-label').text().trim(), 'Cook Time');
+  assert.equal(this.$('.ingredients-label').text().trim(), 'Ingredients');
+  assert.equal(this.$('.directions-label').text().trim(), 'Directions');
+  assert.equal(this.$('.notes-label').text().trim(), 'Notes');
 
   // Template block usage:
-  this.render(hbs`
-    {{#add-recipe}}
-      template block text
-    {{/add-recipe}}
-  `);
+  // this.render(hbs`
+  //   {{#add-recipe}}
+  //     template block text
+  //   {{/add-recipe}}
+  // `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  // assert.equal(this.$().text().trim(), 'template block text');
 });
