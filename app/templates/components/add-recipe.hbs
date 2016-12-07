@@ -1,0 +1,36 @@
+<!-- {{yield}} -->
+
+<h2>Add New Recipe</h2>
+
+<form class="add-recipe-form" {{action 'createRecipe' on="submit"}}>
+  <label>
+    Recipe Name
+    {{input type="text" class="recipe-input-name" value=name}}
+  </label>
+  <label>
+    Upload Photo
+    {{input type="file" accept="image/*"    class="photo-upload" value=photo}}
+  </label>
+  <label>
+    Number of Servings
+    {{input type="number" class="number-servings" value=servings}}
+  </label>
+  <label>
+    Cook Time
+    {{input type="text" class="cook-time" value=time}}
+  </label>
+  <label>
+    Ingredients
+    {{input type="text" class="recipe-input-ingredients" value=ingredients}}
+  </label>
+  <label>
+    Directions
+    {{textarea class="recipe-textarea-directions" value=directions}}
+  </label>
+  <label>
+    Notes
+    {{textarea class="recipe-textarea-notes" value=notes}}
+  </label>
+  <button class="add-recipe-submit">Submit</button>
+  <button class="add-recipe-cancel">Cancel</button>
+</form>

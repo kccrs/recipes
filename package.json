@@ -11,8 +11,8 @@
   "repository": "https://github.com/kccrs/recipes",
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
-    "test": "ember test"
+    "start": "ember electron",
+    "test": "ember test --server"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
