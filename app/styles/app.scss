@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: rgb(133, 165, 199);
 }
 
 footer {
@@ -9,4 +9,17 @@ footer {
   bottom: 0;
   width: 600px;
   justify-content: space-between;
+}
+
+.add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin: 10px;
+  }
+}
+
+.add-recipe-submit,
+.add-recipe-cancel {
+  width: 100px;
 }

@@ -1,16 +1,20 @@
 import DS from 'ember-data';
-import database from '../../database';
+// require('electron');
+import database from './database';
+
+// global.database = database;
 
 export default DS.Adapter.extend({
+
   findAll() {
-    database.select().from('recipes');
+    return database.select().from('recipes');
   },
 
   // findRecord(store, type, id, record) {
   // },
 
-  createRecord(store, type, record) {
-    database('recipes').insert({
+  createRecord(type, record) {
+    return database('recipes').insert({
       name: record.name,
       photo: record.photo,
       servings: record.servings,
@@ -20,6 +24,6 @@ export default DS.Adapter.extend({
       notes: record.notes,
       favorite: record.favorite
     });
-    console.log(record);
+    // console.log('something happened');
   },
 });

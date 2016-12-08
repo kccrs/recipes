@@ -1,28 +1,39 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  name: '',
-  photo: '',
-  servings: '',
-  time: '',
-  ingredients: '',
-  directions: '',
-  notes: '',
+  newName: '',
+  newPhoto: '',
+  newServings: '',
+  newTime: '',
+  newIngredients: '',
+  newDirections: '',
+  newNotes: '',
+  newFavorite: '',
 
   actions: {
     createRecipe() {
-      const recipe = this.getProperties('name', 'photo', 'servings', 'time', 'ingredients', 'directions', 'notes');
-
-      this.get('store').createRecord('recipe', recipe).save().then(() => {
-        this.setProperties({
-          name: '',
-          photo: '',
-          servings: '',
-          time: '',
-          ingredients: '',
-          directions: '',
-          notes: ''
-         });
+      this.store.createRecord('recipe', {
+        name: this.get('newName'),
+        photo: this.get('newPhoto'),
+        servings: this.get('newServings'),
+        time: this.get('newTime'),
+        ingredients: this.get('newIngredients'),
+        directions: this.get('newDirections'),
+        notes: this.get('newNotes'),
+        favorite: this.get('newFavorite'),
+      })
+      .save().then((data) => {
+        this.transitionToRoute('recipe-detail', data);
+        // this.set({
+        //   name: '',
+        //   photo: '',
+        //   servings: '',
+        //   time: '',
+        //   ingredients: '',
+        //   directions: '',
+        //   notes: '',
+        //   favorite: ''
+        //  });
       });
     }
   }
