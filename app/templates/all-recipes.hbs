@@ -1,7 +1,14 @@
 <div class="all-recipes">
   <h1>All the recipes you could ever want</h1>
-  <section>
-    {{outlet}}
+  <section class="recipe-list">
+    {{#each model as |recipe|}}
 
+    <article class="recipe-card">
+      {{!-- {{#link-to ''}} --}}
+      {{recipe-card recipe=recipe}}
+      
+    </article>
+
+    {{/each}}
   </section>
 </div>

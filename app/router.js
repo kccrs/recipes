@@ -6,8 +6,17 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
+// Nested
+// Router.map(function() {
+//   this.route('index', { path: '/', function() {
+//     this.route('recipe-detail', { path: '/:recipe_id' });
+//     this.route('all-recipes');
+//     this.route('add-recipe');
+//   }});
+// });
+
 Router.map(function() {
-  this.route('recipe-detail');
+  this.route('recipe-detail', { path: '/:recipe_id' });
   this.route('all-recipes');
   this.route('add-recipe');
 });

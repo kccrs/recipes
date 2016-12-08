@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 // require('electron');
-import database from './database';
-
+// import database from '../../database';
+const database = requireNode('../../database');
 // global.database = database;
 
 export default DS.Adapter.extend({
