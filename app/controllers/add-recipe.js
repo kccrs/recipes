@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
 
   actions: {
     createRecipe() {
-      this.store.createRecord('recipe', {
+      let recipe = this.store.createRecord('recipe', {
+        // id: 1000,
         name: this.get('newName'),
         photo: this.get('newPhoto'),
         servings: this.get('newServings'),
@@ -22,18 +23,11 @@ export default Ember.Controller.extend({
         notes: this.get('newNotes'),
         favorite: this.get('newFavorite'),
       })
-      .save().then((data) => {
-        this.transitionToRoute('recipe-detail', data);
-        // this.set({
-        //   name: '',
-        //   photo: '',
-        //   servings: '',
-        //   time: '',
-        //   ingredients: '',
-        //   directions: '',
-        //   notes: '',
-        //   favorite: ''
-        //  });
+      debugger
+      recipe.save()
+      .then((data) => {
+        console.log(data.id);
+        this.transitionToRoute('recipe-detail', data.id);
       });
     }
   }

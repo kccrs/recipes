@@ -9,20 +9,17 @@ export default DS.Adapter.extend({
     return database.select().from('recipes');
   },
 
-  // findRecord(store, type, id, record) {
-  // },
+  findRecord(store, type, id) {
+    return database.select().from('recipes').where('id', id);
+  },
 
-  createRecord(type, record) {
-    return database('recipes').insert({
-      name: record.name,
-      photo: record.photo,
-      servings: record.servings,
-      time: record.time,
-      ingredients: record.ingredients,
-      directions: record.directions,
-      notes: record.notes,
-      favorite: record.favorite
+  createRecord(store, type, record) {
+    let data = this.serialize(record);
+    database('recipes').insert(data).then(([id]) => {
+      database.select().from('recipes').where('id', id).then(result => {
+        let recipe = result[0];
+        return {"recipe": recipe};
+      });
     });
-    // console.log('something happened');
   },
 });
