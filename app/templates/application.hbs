@@ -3,23 +3,25 @@
     {{outlet}}
   <!-- {{add-recipe}} -->
 
+  <h1 class="title">Good Food</h1>
   <footer class="footer">
-    <form class="" action="index.html" method="post">
-      <input type="text" name="" placeholder="Search for recipe">
-      <input type="submit" name="" value="Search">
-    </form>
+    <section class="footer-features">
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" placeholder="Search for recipe">
+        <input type="submit" class="footer-button" value="Search">
+      </form>
 
-    {{#link-to 'add-recipe' class="add-button" tagName="button"}}
-      Add Recipe
-    {{/link-to}}
+      {{#link-to 'add-recipe' class="footer-button" tagName="button"}}
+        Add Recipe
+      {{/link-to}}
 
-    {{#link-to 'all-recipes' class="see-all-button" tagName="button"}}
-      See All Recipes
-    {{/link-to}}
+      {{#link-to 'all-recipes' class="footer-button" tagName="button"}}
+        See All Recipes
+      {{/link-to}}
 
-    {{#link-to 'index' class="home-button" tagName="button"}}
-      Home
-    {{/link-to}}
-
+      {{#link-to 'index' class="footer-button" tagName="button"}}
+        Home
+      {{/link-to}}
+    </section>
   </footer>
 </section>
