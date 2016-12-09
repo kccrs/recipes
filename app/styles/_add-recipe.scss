@@ -1,0 +1,23 @@
+.title-new {
+  font-family: $title-font;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 2em;
+  color: #ff7844;
+}
+
+.add-recipe-form {
+  overflow-y: scroll;
+}
+
+.add-recipe-submit {
+  background: #A64942;
+  border: none;
+  border-radius: 5px;
+  color: #1B1F3A;
+  font-size: 15px;
+  &:hover {
+    background: #FF7844;
+    color: white;
+  }
+}
