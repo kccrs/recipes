@@ -454,6 +454,12 @@
 
 	const assert = __webpack_require__(13).assert;
 
+	describe('our test bundle', function () {
+	  it('should work', function () {
+	    assert(true);
+	  });
+	});
+
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
