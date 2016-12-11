@@ -1,0 +1,46 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "A desktop app to track and search for recipes and rendered with Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "test": "mocha",
+    "feature": "wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kccrs/recipes"
+  },
+  "author": "Casey Cross and MaryJane Valade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kccrs/recipes/issues"
+  },
+  "homepage": "https://github.com/kccrs/recipes#readme",
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
+    "mocha": "^3.2.0",
+    "mocha-loader": "^1.0.0",
+    "node-sass": "^4.0.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "wdio-dot-reporter": "0.0.6",
+    "wdio-mocha-framework": "^0.5.4",
+    "wdio-selenium-standalone-service": "0.0.7",
+    "webdriverio": "^4.4.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jsdom": "^9.8.3"
+  }
+}
